@@ -17,6 +17,14 @@ type RefreshAccessTokenResponse struct {
 	Scope        string `json:"scope"`
 }
 
+type ValidateTokenResponse struct {
+	ClientID  string `json:"client_id"`
+	Login     string `json:"login"`
+	Scopes    Scopes `json:"scopes"`
+	UserID    string `json:"user_id"`
+	ExpiresIn int    `json:"expires_in"`
+}
+
 type ResponseError *struct {
 	InternalError error
 	Error         string `json:"error"`
