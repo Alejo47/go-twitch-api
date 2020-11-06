@@ -5,7 +5,7 @@ type Scopes []string
 type AccessTokenResponse struct {
 	AccessToken  string `json:"access_token"`
 	RefreshToken string `json:"refresh_token"`
-	ExpiresIn    string `json:"expires_in"`
+	ExpiresIn    int    `json:"expires_in"`
 	Scope        Scopes `json:"scope"`
 	TokenType    string `json:"token_type"`
 	StatusCode   uint
